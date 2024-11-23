@@ -1,25 +1,16 @@
-a = float(input("nhập a: "))
-b = float(input("nhập b: "))
-c = float(input("nhập c: "))
-if a + b > c:
-   a + c > b
-   b + c > a
-   print("là tam giác thường")
-if a == b == c:
-    print("là tam giác đều")
-if a**2 + b**2 == c**2:
-     a**2 + c**2 == b**2
-     b**2 + c**2 == a**2
-     print("là tam giác vuông")
-if a == b:
-    a**2 + b**2 == c**2
-    a == c
-    a**2 + c**2 == b**2
-    b == c
-    b**2 + c**2 == a**2
-    print("là tam giác vuông cân")
+import math
+
+# Nhập vào số nguyên dương n
+n = int(input("Nhập vào số nguyên dương n: "))
+
+if n >= 6:
+    S = 0
+    for k in range(6, n + 1):
+        S += math.sqrt(k ** 2 + 1) / (2 * k)
+    print(f"Tổng S là: {S}")
 else:
-    print("không phải ba cạnh tam giác")   
+    print("n phải lớn hơn hoặc bằng 6.")
+
 
 
 
